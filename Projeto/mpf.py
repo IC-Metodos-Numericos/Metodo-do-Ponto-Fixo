@@ -31,8 +31,9 @@ def fixed_point_iteration(g, x0, tol=1e-6, max_iter=100):
 # Nesse caso, g(x) = cos(x)
 
 if __name__ == "__main__":
-    g = lambda x: math.sqrt(6-x)
-    x0 = 2.25
+    g = lambda x:  (x**2) + 10#math.cos(math.log(x))*2
+
+    x0 = 2 # Chute inicial
 
     try:
         root, iters, history = fixed_point_iteration(g, x0)
