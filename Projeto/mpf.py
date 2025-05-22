@@ -27,9 +27,6 @@ def fixed_point_iteration(g, x0, tol=1e-6, max_iter=100):
 
     raise Exception("O método não convergiu dentro do número máximo de iterações.")
 
-# Exemplo de uso: resolver f(x) = cos(x) - x = 0
-# Nesse caso, g(x) = cos(x)
-
 if __name__ == "__main__":
     g = lambda x:  (x**2) + 10#math.cos(math.log(x))*2
 
