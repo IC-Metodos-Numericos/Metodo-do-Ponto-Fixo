@@ -38,13 +38,3 @@ main = do
     if didConverge
       then printf "Root found: %.8f\n" (last iters)
       else putStrLn "Did not converge."
-      -- Plotando o gráfico da função g(x) e da linha y = x
-      let xs = [0,0.01..2]
-        ys = map g xs
-        identity = xs
-        plotData = zip3 xs ys identity
-        plotFile = "fixed_point_plot.csv"
-      writeFile plotFile "x,g(x),y=x\n"
-      mapM_ (\(x, y, idy) -> appendFile plotFile (printf "%.5f,%.5f,%.5f\n" x y idy)) plotData
-      putStrLn $ "Plot data saved to " ++ plotFile
-      putStrLn "Abra o arquivo CSV em um software de planilha ou use Python/gnuplot para visualizar o gráfico."
