@@ -37,22 +37,22 @@ float zero() {
     return f;
 }
 
-int teste() {
+int teste() { //todo intervalo não só nos extremos
     float a, b, x, d_phi;
-    d_phi = 
+    d_phi = d_phi(x);
     
     printf("Insira o limite inferior do intervalo: ");
     scanf("%f", &a);
     printf("Insira o limite superior do intervalo: ");
-    printf("%f\n", &b);
+    scanf("%f", &b);
     
     printf("\n");
     
-    d_phi = 3*pow(a, 2) - 8;
+    d_phi = d_phi(a);
     if (fabs(d_phi) >= 1)
         return 0;
     else {
-        d_phi = 3*pow(b, 2) - 8;
+        d_phi = d_phi(b);
         if (fabs(d_phi) >= 1)
             return 0;
     }
@@ -60,8 +60,7 @@ int teste() {
     return 1;
 }
 
-int main()
-{
+int main() {
     float x, phi;
     int t;
 
