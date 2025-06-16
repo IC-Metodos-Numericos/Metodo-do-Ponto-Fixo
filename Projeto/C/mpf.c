@@ -1,12 +1,18 @@
 #include <stdio.h>
 #include <math.h>
 
+float d_phi(float x) {
+    float d_phi = 3*pow(x, 2) - 8;
+
+    return d_phi;
+}
+
 /*
 float calcula(float x) {
     f(x) = ...;
     atualiza x;
     atualiza f;
-    
+
     return f_x;
 }
 */
@@ -33,7 +39,7 @@ float zero() {
 
 int teste() {
     float a, b, x, d_phi;
-    d_phi = 3*pow(x, 2) - 8;
+    d_phi = 
     
     printf("Insira o limite inferior do intervalo: ");
     scanf("%f", &a);
