@@ -28,9 +28,9 @@ def fixed_point_iteration(g, x0, tol=1e-6, max_iter=100):
     raise Exception("O método não convergiu dentro do número máximo de iterações.")
 
 if __name__ == "__main__":
-    g = lambda x:  (x**2) + 10#math.cos(math.log(x))*2
+    g = lambda x:  math.sin( math.pow(x,2) + math.cos(x) ) #math.cos(math.log(x))*2
 
-    x0 = 2 # Chute inicial
+    x0 = 1.5 # Chute inicial
 
     try:
         root, iters, history = fixed_point_iteration(g, x0)
